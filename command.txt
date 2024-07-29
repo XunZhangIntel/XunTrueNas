@@ -1,0 +1,28 @@
+/etc/init.d/networking restart
+service ssh restart
+
+vim /etc/hosts
+
+systemctl enable apache2
+systemctl start apache2
+systemctl status apache2.service
+netstat -lnp|grep 80
+vim /etc/apache2/ports.conf
+systemctl status apache2.service
+systemctl start apache2
+
+sudo a2enmod dav
+sudo a2enmod dav_fs
+systemctl restart apache2
+
+a2ensite webdav.conf
+systemctl reload apache2
+systemctl restart apache2
+
+apachectl configtest
+/etc/apache2/sites-available/webdav.conf
+apachectl configtest
+
+htpasswd -b htpasswd.user Jack 123456
+
+rsync -avzP "/mnt/GuangMingHome/ShareFile/Movie/X (2022)" .
