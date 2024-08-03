@@ -22,7 +22,12 @@ systemctl restart apache2
 apachectl configtest
 /etc/apache2/sites-available/webdav.conf
 apachectl configtest
+/var/log/apache2/access.log
+/var/log/apache2/error.log
+
 
 htpasswd -b htpasswd.user Jack 123456
 
 rsync -avzP "/mnt/GuangMingHome/ShareFile/Movie/X (2022)" .
+
+chown -R www-data:www-data /mnt/ShareMedias/Movies
