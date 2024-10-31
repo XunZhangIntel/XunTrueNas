@@ -25,6 +25,7 @@ apachectl configtest
 /var/log/apache2/access.log
 /var/log/apache2/error.log
 
+rsync -rvn --delete directory1/ directory2
 
 htpasswd -b htpasswd.user Jack 123456
 

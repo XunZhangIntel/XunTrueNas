@@ -1,0 +1,10 @@
+set ask askcc append dot save crt
+ignore Received Message-Id Resent-Message-Id Status Mail-From Return-Path Via Delivered-To
+
+set smtp=smtp.126.com
+set smtp-auto=login
+set smtp-auth-user=zhangxun2008cool
+set smtp-auth-password=XNXWVJACMFHWNIOV
+set from=zhangxun2008cool@126.com
+set ssl-verify=ignore
+
